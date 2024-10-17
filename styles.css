@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;    
+    outline: none;
+}
+
+body{
+    font-family: "Orbitron", sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-color: black;
+    color: darkorange;
+    font-size: 1.5em;
+}
+
+.animation-bg{
+    background:linear-gradient(-45deg, #ee7752,orange, #e73c7e,#23a6d5,#23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 7s ease infinite;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50% ;
+    }
+    50%{
+        background-position:100% 50% ;
+    }
+    100%{
+        background-position:0% 50% ;
+    }
+}
+
+.outer-circle{
+    /* height: 30vh;
+    width: 14vw; */
+    height: 200px;
+    width: 200px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5em;
+    margin-top: 3em;
+}
+.inner-circle{
+    /* height: 28vh;
+    width: 13vw; */
+    height: 185px;
+    width: 185px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.minute{
+    font-size: 1.6em ;
+}
+.sec{
+    font-size: 1.35em;
+}
+.msec{
+    font-size: 1.2em;
+}
+
+.button-wrapper{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid darkorange;
+    background-color: black;
+    color: aliceblue;
+}
+.button:hover{
+    color: darkorange ;
+    border: 2px solid aliceblue;
+}
+
+.laps{
+    padding: 1em 0em;
+    list-style: none;
+    overflow: auto;
+    position: relative;
+    height: 28vh;
+}
+.laps::-webkit-scrollbar{
+    display: none;
+}
+.lap-item{
+    display: block;
+    width: 250px;
+    padding: 0.3em;
+    text-align: center;
+    border: 2px solid darkslategray;
+    border-radius: 2em;
+    margin-top: 0.5em;
+}
+.number{
+    padding-right: 1em;
+}
+.time-stamp{
+    display: inline-block;
+}
+.lap-clear-button{
+    display: block;
+    position: fixed;
+    z-index: 999;
+    bottom: 5em;
+    left: 50%;
+    transform: translate(-50%);
+    width: 8vw;
+    border-radius: 2em;
+    padding: 0.9em 0;
+    background-color: whitesmoke;
+    cursor: pointer;
+
+}
+.hidden{
+    visibility: hidden;
+}
